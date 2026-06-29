@@ -14,9 +14,9 @@ Welcome to the frontend repository of the **Smart Baby Care System**. This proje
 This repository hosts the pure **HTML-based** User Interface (UI) for our IoT-enabled automated cradle system. 
 
 ## 📸 Our Team And Product
-<img src="2d0e1865-d904-4030-9448-aa4d2e692ab3.jpg" width="500" alt="Our Teeam">
+<img src="2d0e1865-d904-4030-9448-aa4d2e692ab3.jpg" width="300" alt="Our Teeam">
 
-<img src="12c5061b-0717-4c70-92f8-5e95d32a2154.jpg" width="500" alt="Our Product">
+<img src="12c5061b-0717-4c70-92f8-5e95d32a2154.jpg" width="300" alt="Our Product">
 
 
 ## 🧠 The Machine Learning Pipeline (Baby Detection)
