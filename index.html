@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Baby Care System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        /* CSS Variables for Dynamic Theming */
+        :root {
+            --bg-color: #fcfaf8;
+            --card-bg: #ffffff;
+            --text-main: #4b5563;
+            --text-muted: #9ca3af;
+            --accent-primary: #fbbf24;
+            --accent-hover: #f59e0b;
+            --accent-light: #fef3c7;
+            --switch-bg: #d1d5db;
+        }
+
+        /* Blue theme for boys */
+        body.theme-blue {
+            --bg-color: #f0f7ff;
+            --accent-primary: #60a5fa;
+            --accent-hover: #3b82f6;
+            --accent-light: #dbeafe;
+        }
+
+        /* Pink theme for girls */
+        body.theme-pink {
+            --bg-color: #fdf2f8;
+            --accent-primary: #f472b6;
+            --accent-hover: #ec4899;
+            --accent-light: #fce7f3;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            transition: background-color 0.5s ease;
+            font-family: sans-serif;
+        }
+
+        .card { background-color: var(--card-bg); border-radius: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="theme-light min-h-screen flex flex-col">
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-6">
+        </main>
+
+    <script type="module">
+        // Import Firebase SDKs
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
+
+        let db;
+        let isConnected = false;
+
+        // Initialize Firebase connection
+        async function initFirebase() {
+            try {
+                // IMPORTANT: Replace the placeholder with your actual Firebase Database URL
+                const firebaseConfig = {
+                    databaseURL: "YOUR_FIREBASE_DATABASE_URL_HERE" 
+                };
+
+                const app = initializeApp(firebaseConfig);
+                db = getDatabase(app);
+                
+                // Reference to the main data node in the Realtime Database
+                const cradleRef = ref(db, 'smart_cradle');
+                
+                // Listen for real-time data changes
+                onValue(cradleRef, (snapshot) => {
+                    if (snapshot.exists()) {
+                        const data = snapshot.val();
+                        isConnected = true;
+                        // Process data and update UI
+                    }
+                });
+            } catch (error) {
+                console.error("Firebase initialization failed:", error);
+            }
+        }
+
+        // Trigger initialization on page load
+        window.addEventListener('DOMContentLoaded', initFirebase);
+    </script>
+</body>
+</html>
