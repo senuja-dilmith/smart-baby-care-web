@@ -8,7 +8,7 @@
 Welcome to the frontend repository of the **Smart Baby Care System**. This project was developed as the main hardware project for the **EE2044 - Electrical Measurements and Instrumentation** module at the Department of Electrical Engineering, University of Moratuwa.
 
 🌐 **Live Dashboard:** [Click here to view the Web App](https://senuja-dilmith.github.io/smart-baby-care-web/)
-🌐 **visit on linkdin:** [](https://www.linkedin.com/posts/senuja-dilmith-745825349_engineering-iot-labview-ugcPost-7477016079890923520-kYB9/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFcnN-UBbr5jnr6E6rHCfVg78KUNn9FJ8jc)
+🌐 **visit on linkdin:** [Click here](https://www.linkedin.com/posts/senuja-dilmith-745825349_engineering-iot-labview-ugcPost-7477016079890923520-kYB9/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFcnN-UBbr5jnr6E6rHCfVg78KUNn9FJ8jc)
 ## 📖 About This Repository
 This repository hosts the pure **HTML-based** User Interface (UI) for our IoT-enabled automated cradle system. The web app is hosted entirely on **GitHub Pages** and acts as the monitoring and control panel for parents. It communicates with our physical hardware setup and cloud database in real-time.
 
